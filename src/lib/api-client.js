@@ -3,7 +3,7 @@ import axios from "axios"
 
 
 export const apiClient = axios.create({
-    baseURL: "https://mernchatappbackend-mxfy.onrender.com",
+    baseURL: HOST,
     withCredentials: true,
 });
 
