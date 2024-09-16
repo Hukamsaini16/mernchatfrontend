@@ -108,167 +108,49 @@ const MessageBar = () => {
 
   return (
    
-    // <div className="h-[10vh] bg-[#1c1d25] flex justify-center items-center px-8 mb-6 gap-6 sm:h-[8vh] sm:w-[90%] sm:px-4 sm:gap-4 sm:mb-4">
-    //  <div className="flex-1 flex bg-[#2a2b33] rounded-md items-center gap-5 pr-5 pl-5 ">
-    //     <input 
-    //     type="text" 
-    //     className="flex-1 p-5 bg-transparent rounded-md focus:border-none focus:outline-none"
-    //     placeholder="Enter Message"
-    //     value={message}
-    //     onChange={(e) => setMessage(e.target.value)}
-    //     />
-    //     <button className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
-    //     onClick={handleAttachmentClick}
-    //     >
-    //         <GrAttachment className="text-2xl"/>
-    //     </button>
-    //     <input 
-    //     type="file"
-    //     className="hidden"
-    //     ref={fileInputRef}
-    //     onChange={handleAttachmentChange}
-    //     />
-    //     <div className="relative">
-    //       <button className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
-    //       onClick={()=>setemojiPickerOpen(true)}
-    //       >
-    //         <RiEmojiStickerLine className="text-2xl"/>
-    //       </button>
-    //       <div className="absolute bottom-16 right-0" ref={emojiRef}>
-    //         <EmojiPicker 
-    //           theme="dark" 
-    //           open={emojiPickerOpen}
-    //           onEmojiClick={handleAddEmoji}
-    //           autoFocusSearch={false}
-    //         />
-    //       </div>
-    //     </div>
-    //  </div>
-    //   <button 
-    //  className="bg-[#8417ff] rounded-md flex items-center justify-center p-5  focus:border-none hover:bg-[#741bda] focus:bg-[#741bda] focus:outline-none focus:text-white duration-300 transition-all"
-    //  onClick={handleSendMessage}
-    //  >
-    //     <IoSend className="text-2xl"/>
-    //  </button>
-    // </div>
-
-
-
-//     <div className="flex items-center bg-[#1c1d25] p-2 sm:p-1 lg:p-3 xl:p-4 gap-2 lg:gap-3 xl:gap-4 w-full">
-  
-//   {/* Attachment Button */}
-//   <button 
-//     className="text-neutral-500 text-xl sm:text-lg lg:text-xl xl:text-2xl"
-//     onClick={handleAttachmentClick}
-//   >
-//     <GrAttachment />
-//   </button>
-
-//   <input 
-//     type="file" 
-//     className="hidden" 
-//     ref={fileInputRef} 
-//     onChange={handleAttachmentChange} 
-//   />
-
-//   {/* Input Field */}
-//   <div className="flex flex-1 items-center bg-[#2a2b33] rounded-full px-4 sm:px-2 lg:px-3 xl:px-4">
-//     <input 
-//       type="text" 
-//       className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none p-2 text-base sm:text-sm lg:text-base xl:text-lg"
-//       placeholder="Type a message"
-//       value={message}
-//       onChange={(e) => setMessage(e.target.value)}
-//     />
-
-//     {/* Emoji Button */}
-//     <button 
-//       className="text-neutral-500 text-xl sm:text-lg lg:text-xl xl:text-2xl"
-//       onClick={() => setemojiPickerOpen(true)}
-//     >
-//       <RiEmojiStickerLine />
-//     </button>
-    
-//     {/* Emoji Picker */}
-//     {emojiPickerOpen && (
-//       <div className="absolute bottom-16 right-0 z-50" ref={emojiRef}>
-//         <EmojiPicker 
-//           theme="dark" 
-//           onEmojiClick={handleAddEmoji} 
-//         />
-//       </div>
-//     )}
-//   </div>
-
-//   {/* Send Button */}
-//   <button 
-//     className="bg-[#8417ff] text-white rounded-full p-3 sm:p-2 lg:p-3 xl:p-4 focus:outline-none hover:bg-[#741bda] transition-all"
-//     onClick={handleSendMessage}
-//   >
-//     <IoSend className="text-xl sm:text-lg lg:text-xl xl:text-2xl"/>
-//   </button>
-
-// </div>
-
-
-
-<div className="fixed bottom-0 left-0 w-full bg-[#1c1d25] px-3 py-2 flex items-center gap-3 sm:py-1 sm:px-2 z-50">
-  
-  {/* Attachment Button */}
-  <button 
-    className="text-neutral-500 text-xl sm:text-lg lg:text-xl xl:text-2xl"
-    onClick={handleAttachmentClick}
-  >
-    <GrAttachment />
-  </button>
-
-  <input 
-    type="file" 
-    className="hidden" 
-    ref={fileInputRef} 
-    onChange={handleAttachmentChange} 
-  />
-
-  {/* Input Field */}
-  <div className="flex flex-1 items-center bg-[#2a2b33] rounded-full px-4 sm:px-2 lg:px-3 xl:px-4">
-    <input 
-      type="text" 
-      className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none p-2 text-base sm:text-sm lg:text-base xl:text-lg"
-      placeholder="Type a message"
-      value={message}
-      onChange={(e) => setMessage(e.target.value)}
-      onFocus={() => window.scrollTo(0, document.body.scrollHeight)} // Ensure input is visible when focused
-    />
-
-    {/* Emoji Button */}
-    <button 
-      className="text-neutral-500 text-xl sm:text-lg lg:text-xl xl:text-2xl"
-      onClick={() => setemojiPickerOpen(true)}
-    >
-      <RiEmojiStickerLine />
-    </button>
-    
-    {/* Emoji Picker */}
-    {emojiPickerOpen && (
-      <div className="absolute bottom-16 right-0 z-50" ref={emojiRef}>
-        <EmojiPicker 
-          theme="dark" 
-          onEmojiClick={handleAddEmoji} 
+    <div className="h-[10vh] bg-[#1c1d25] flex justify-center items-center px-8 mb-6 gap-6 sm:h-[8vh] sm:w-[90%] sm:px-4 sm:gap-4 sm:mb-4">
+     <div className="flex-1 flex bg-[#2a2b33] rounded-md items-center gap-5 pr-5 pl-5 ">
+        <input 
+        type="text" 
+        className="flex-1 p-5 bg-transparent rounded-md focus:border-none focus:outline-none"
+        placeholder="Enter Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
         />
-      </div>
-    )}
-  </div>
-
-  {/* Send Button */}
-  <button 
-    className="bg-[#8417ff] text-white rounded-full p-3 sm:p-2 lg:p-3 xl:p-4 focus:outline-none hover:bg-[#741bda] transition-all"
-    onClick={handleSendMessage}
-  >
-    <IoSend className="text-xl sm:text-lg lg:text-xl xl:text-2xl"/>
-  </button>
-
-</div>
-
+        <button className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
+        onClick={handleAttachmentClick}
+        >
+            <GrAttachment className="text-2xl"/>
+        </button>
+        <input 
+        type="file"
+        className="hidden"
+        ref={fileInputRef}
+        onChange={handleAttachmentChange}
+        />
+        <div className="relative">
+          <button className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
+          onClick={()=>setemojiPickerOpen(true)}
+          >
+            <RiEmojiStickerLine className="text-2xl"/>
+          </button>
+          <div className="absolute bottom-16 right-0" ref={emojiRef}>
+            <EmojiPicker 
+              theme="dark" 
+              open={emojiPickerOpen}
+              onEmojiClick={handleAddEmoji}
+              autoFocusSearch={false}
+            />
+          </div>
+        </div>
+     </div>
+      <button 
+     className="bg-[#8417ff] rounded-md flex items-center justify-center p-5  focus:border-none hover:bg-[#741bda] focus:bg-[#741bda] focus:outline-none focus:text-white duration-300 transition-all"
+     onClick={handleSendMessage}
+     >
+        <IoSend className="text-2xl"/>
+     </button>
+    </div>
 
   )
 }
