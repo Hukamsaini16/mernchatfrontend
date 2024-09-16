@@ -152,7 +152,67 @@ const MessageBar = () => {
     //  </button>
     // </div>
 
-    <div className="flex items-center bg-[#1c1d25] p-2 sm:p-1 lg:p-3 xl:p-4 gap-2 lg:gap-3 xl:gap-4 w-full">
+
+
+//     <div className="flex items-center bg-[#1c1d25] p-2 sm:p-1 lg:p-3 xl:p-4 gap-2 lg:gap-3 xl:gap-4 w-full">
+  
+//   {/* Attachment Button */}
+//   <button 
+//     className="text-neutral-500 text-xl sm:text-lg lg:text-xl xl:text-2xl"
+//     onClick={handleAttachmentClick}
+//   >
+//     <GrAttachment />
+//   </button>
+
+//   <input 
+//     type="file" 
+//     className="hidden" 
+//     ref={fileInputRef} 
+//     onChange={handleAttachmentChange} 
+//   />
+
+//   {/* Input Field */}
+//   <div className="flex flex-1 items-center bg-[#2a2b33] rounded-full px-4 sm:px-2 lg:px-3 xl:px-4">
+//     <input 
+//       type="text" 
+//       className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none p-2 text-base sm:text-sm lg:text-base xl:text-lg"
+//       placeholder="Type a message"
+//       value={message}
+//       onChange={(e) => setMessage(e.target.value)}
+//     />
+
+//     {/* Emoji Button */}
+//     <button 
+//       className="text-neutral-500 text-xl sm:text-lg lg:text-xl xl:text-2xl"
+//       onClick={() => setemojiPickerOpen(true)}
+//     >
+//       <RiEmojiStickerLine />
+//     </button>
+    
+//     {/* Emoji Picker */}
+//     {emojiPickerOpen && (
+//       <div className="absolute bottom-16 right-0 z-50" ref={emojiRef}>
+//         <EmojiPicker 
+//           theme="dark" 
+//           onEmojiClick={handleAddEmoji} 
+//         />
+//       </div>
+//     )}
+//   </div>
+
+//   {/* Send Button */}
+//   <button 
+//     className="bg-[#8417ff] text-white rounded-full p-3 sm:p-2 lg:p-3 xl:p-4 focus:outline-none hover:bg-[#741bda] transition-all"
+//     onClick={handleSendMessage}
+//   >
+//     <IoSend className="text-xl sm:text-lg lg:text-xl xl:text-2xl"/>
+//   </button>
+
+// </div>
+
+
+
+<div className="fixed bottom-0 left-0 w-full bg-[#1c1d25] px-3 py-2 flex items-center gap-3 sm:py-1 sm:px-2 z-50">
   
   {/* Attachment Button */}
   <button 
@@ -177,6 +237,7 @@ const MessageBar = () => {
       placeholder="Type a message"
       value={message}
       onChange={(e) => setMessage(e.target.value)}
+      onFocus={() => window.scrollTo(0, document.body.scrollHeight)} // Ensure input is visible when focused
     />
 
     {/* Emoji Button */}
